@@ -1,0 +1,64 @@
+Arguments: 
+  /home/asfour/.nvm/versions/node/v12.18.3/bin/node /home/asfour/.nvm/versions/node/v12.18.3/bin/yarn add @aws-cdk/api-gatewayv2
+
+PATH: 
+  /home/asfour/.pyenv/shims:/home/asfour/.pyenv/bin:/home/asfour/perl5/bin:/home/asfour/.nvm/versions/node/v12.18.3/bin:/home/asfour/.local/bin:/home/asfour/bin:/home/asfour/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/asfour/bin:/home/asfour/.local/bin:/usr/lib/ccache/bin:/opt/popcorntime:/home/asfour/workspace/go/bin:/home/asfour/.config/composer/vendor/bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.18.3
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@aws-cdk%2fapi-gatewayv2: Not found
+      at Request.params.callback [as _callback] (/home/asfour/.nvm/versions/node/v12.18.3/lib/node_modules/yarn/lib/cli.js:66987:18)
+      at Request.self.callback (/home/asfour/.nvm/versions/node/v12.18.3/lib/node_modules/yarn/lib/cli.js:140748:22)
+      at Request.emit (events.js:315:20)
+      at Request.<anonymous> (/home/asfour/.nvm/versions/node/v12.18.3/lib/node_modules/yarn/lib/cli.js:141720:10)
+      at Request.emit (events.js:315:20)
+      at IncomingMessage.<anonymous> (/home/asfour/.nvm/versions/node/v12.18.3/lib/node_modules/yarn/lib/cli.js:141642:12)
+      at Object.onceWrapper (events.js:421:28)
+      at IncomingMessage.emit (events.js:327:22)
+      at endReadableNT (_stream_readable.js:1220:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+
+npm manifest: 
+  {
+    "name": "cdk-workshop",
+    "version": "0.1.0",
+    "bin": {
+      "cdk-workshop": "bin/cdk-workshop.js"
+    },
+    "scripts": {
+      "build": "tsc",
+      "watch": "tsc -w",
+      "test": "jest",
+      "cdk": "cdk"
+    },
+    "devDependencies": {
+      "aws-cdk": "1.62.0",
+      "@aws-cdk/assert": "1.62.0",
+      "@types/jest": "^26.0.10",
+      "@types/node": "10.17.27",
+      "jest": "^26.4.2",
+      "ts-jest": "^26.2.0",
+      "ts-node": "^8.1.0",
+      "typescript": "~3.9.7"
+    },
+    "dependencies": {
+      "@aws-cdk/aws-sns": "1.62.0",
+      "@aws-cdk/aws-sns-subscriptions": "1.62.0",
+      "@aws-cdk/aws-sqs": "1.62.0",
+      "@aws-cdk/core": "1.62.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
