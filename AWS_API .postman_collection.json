@@ -1,0 +1,138 @@
+{
+    "info": {
+        "_postman_id": "43272400-8385-4db2-b061-ab9e23e93ca6",
+        "name": "AWS_API ",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [{
+            "name": "Create Candidate",
+            "request": {
+                "method": "POST",
+                "header": [{
+                    "key": "Content-Type",
+                    "value": "{{content_type}}",
+                    "type": "text",
+                    "disabled": true
+                }],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"id\": \"57960a53-3c92-468c-97c9-e5dae88217b5\",\n    \"name\": \"Jon Doe\",\n    \"skills\": [\n        \"nodejs\",\n        \"python\"\n    ]\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{url}}/candidates",
+                    "host": [
+                        "{{url}}"
+                    ],
+                    "path": [
+                        "candidates"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Search Candidate",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"skill\": \"python\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{url}}/candidates/search/skill",
+                    "host": [
+                        "{{url}}"
+                    ],
+                    "path": [
+                        "candidates",
+                        "search",
+                        "skill"
+                    ],
+                    "query": [{
+                        "key": "skills",
+                        "value": "go,elixir,erlang",
+                        "disabled": true
+                    }]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "List Candidates",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"id\": \"person1\",\n  \"name\": \"Amy Fish\",\n  \"skills\": [ \"scala\", \"go\" ]\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{url}}/candidates/",
+                    "host": [
+                        "{{url}}"
+                    ],
+                    "path": [
+                        "candidates",
+                        ""
+                    ]
+                }
+            },
+            "response": []
+        }
+    ],
+    "event": [{
+            "listen": "prerequest",
+            "script": {
+                "id": "de506c82-d027-47b1-838d-1af154607b29",
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "id": "904abfbf-78fd-43a0-97c0-94a17a2a6233",
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        }
+    ],
+    "variable": [{
+            "id": "b64b0163-b8c0-468f-80c0-4ad9f09de4cd",
+            "key": "url",
+            "value": "CHANGE_ME_PLEASE"
+        },
+        {
+            "id": "e2ccac3b-1dc5-477b-b84c-01d5966be45f",
+            "key": "content_type",
+            "value": "application/json"
+        }
+    ],
+    "protocolProfileBehavior": {}
+}

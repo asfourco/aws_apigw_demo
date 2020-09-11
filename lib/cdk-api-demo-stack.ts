@@ -62,7 +62,7 @@ export class CdkAPIDemo extends cdk.Stack {
           integration: createCandidate
       });
       api.addRoutes({
-          path: '/candidates/search/skill',
+          path: '/candidates/search',
           methods: [apigw.HttpMethod.GET],
           integration: searchCandidates
       });

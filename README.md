@@ -1,15 +1,34 @@
-# Welcome to your CDK TypeScript project!
+# API Gateway Demo
 
-You should explore the contents of this project. It demonstrates a CDK app with an instance of a stack (`CdkWorkshopStack`)
-which contains an Amazon SQS queue that is subscribed to an Amazon SNS topic.
+This is a small demonstration on setting up an AWS api gateway (v2) with lambda functions responding to each endpoint.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## Concept
 
-## Useful commands
+Create the following endpoints
 
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+|HTTP Verb| Endpoint | payload|Return|
+| --|:--|:--|
+| POST| /candidates | body: JSON object of name (string), id (string), skills (string[])| success: 201, error: 500|
+|GET | /candidates| none | array of candidates|
+|GET | /candidates/search | query: skill="string"| array of candidates|
+
+Notes:
+
+* This demo makes use of dynamoDB as a backend.
+* The search is based on one keyword at a time
+
+I've attached a Postman Collection to help with the testing. Please make sure to update the URL variable of the collection to the correct AWS Http API gateway URL.
+
+## Usage
+
+### Global setup
+
+1. Ensure you have `aws cli` authorization, i.e., your `~/.aws/credentials` exists and is valid
+1. Installed globally `typescript`, `yarn`, and `aws-cdk`
+
+### local
+
+1. Install modules: `yarn install`
+1. To see what the CloudFormation template would be use `cdk synth`
+1. Deploy to your AWS account with `cdk deploy`
+1. Now use Postman or curl to test the endpoints
