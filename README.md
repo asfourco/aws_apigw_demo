@@ -7,8 +7,8 @@ This is a small demonstration on setting up an AWS api gateway (v2) with lambda 
 Create the following endpoints
 
 |HTTP Verb| Endpoint | payload|Return|
-| --|:--|:--|
-| POST| /candidates | body: JSON object of name (string), id (string), skills (string[])| success: 201, error: 500|
+| --|:--|:--|:--|
+| POST| /candidates | body: JSON object of name (string), id (string), skills (string[])| none|
 |GET | /candidates| none | array of candidates|
 |GET | /candidates/search | query: skill="string"| array of candidates|
 
